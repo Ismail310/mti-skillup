@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTI SkillUP | معهد ماستر تك - دروس دعم وتكوين تقني وهران</title>
+    <meta name="description" content="معهد MTI SkillUP في وهران (إيسطو) - دروس دعم جامعية لطلبة ST و MI و SM، ودورات تكوينية متخصصة في البرمجة والتطوير.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Cairo & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        sans: ['Cairo', 'Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#241454',     /* Deep Royal Purple */
+                            purpleLight: '#371e7d',
+                            pink: '#d81b60',       /* Vivid Magenta / Pink */
+                            pinkHover: '#b81450',
+                            accent: '#f02473',
+                            dark: '#0f0a24',
+                            surface: '#f9f7fd',
+                            border: '#ede7f6'
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(216, 27, 96, 0.45)',
+                        'glow-purple': '0 0 25px rgba(36, 20, 84, 0.35)',
+                        'card-hover': '0 20px 40px -15px rgba(36, 20, 84, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #d81b60 0%, #7c4dff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-purple {
+            background: linear-gradient(135deg, #241454 0%, #d81b60 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-pattern-dots {
+            background-image: radial-gradient(#d81b60 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.08;
+        }
+        .bg-mesh {
+            background-color: #241454;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(216, 27, 96, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(124, 77, 255, 0.35) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(26, 12, 64, 0.9) 0px, transparent 70%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9fc] text-gray-800 antialiased selection:bg-brand-pink selection:text-white">
+
+    <!-- TOP PROMO BANNER -->
+    <div class="bg-gradient-to-r from-brand-dark via-brand-purple to-brand-pink text-white text-xs sm:text-sm py-2 px-4 shadow-sm relative z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-right">
+            <div class="flex items-center gap-2 font-bold justify-center">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[11px] font-extrabold bg-brand-pink rounded-full uppercase tracking-wider animate-pulse">
+                    جديد
+                </span>
+                <span>🔥 التسجيلات مفتوحة لدروس الدعم الجامعي (ST - MI - SM) والدورات التقنية | الأماكن محدودة</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <a href="tel:0779414224" class="hover:text-pink-200 transition-colors flex items-center gap-1.5" dir="ltr">
+                    <i class="fa-solid fa-phone text-brand-pink"></i> 07 79 41 42 24
+                </a>
+                <span class="opacity-40">|</span>
+                <a href="https://wa.me/213779414224" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1 text-green-400 font-bold">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> واتساب فوري
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVBAR -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-gray-100/80 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Identity -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div class="relative">
+                        <img src="logo.png" alt="MTI SkillUP Logo" class="h-12 w-12 sm:w-14 sm:h-14 object-contain rounded-full border-2 border-brand-pink/30 p-0.5 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-black text-2xl tracking-tight text-brand-purple">
+                            MTI <span class="text-brand-pink">SkillUP</span>
+                        </span>
+                        <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-1">
+                            Master Tech Institut • Oran
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-7 space-x-reverse font-bold text-[15px] text-gray-700">
+                    <a href="#home" class="hover:text-brand-pink transition-colors">الرئيسية</a>
+                    <a href="#about" class="hover:text-brand-pink transition-colors">عن المعهد</a>
+                    <a href="#schedule" class="hover:text-brand-pink transition-colors">الدروس والجدول</a>
+                    <a href="#tech" class="hover:text-brand-pink transition-colors">التكوين التقني</a>
+                    <a href="#why-us" class="hover:text-brand-pink transition-colors">لماذا نحن؟</a>
+                    <a href="#contact" class="hover:text-brand-pink transition-colors">الموقع والتواصل</a>
+                </nav>
+
+                <!-- Actions / CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/213779414224" target="_blank" class="p-2.5 px-4 rounded-xl text-brand-purple bg-brand-surface border border-brand-border hover:bg-brand-purple hover:text-white font-bold text-sm transition-all duration-200 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i>
+                        <span>استفسار</span>
+                    </a>
+                    <button onclick="openRegistrationModal()" class="px-6 py-2.5 bg-gradient-to-r from-brand-pink to-brand-purple text-white font-bold text-sm rounded-xl shadow-md hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>سجل الآن</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <button onclick="openRegistrationModal()" class="sm:hidden px-3.5 py-1.5 bg-brand-pink text-white font-bold text-xs rounded-lg">
+                        سجل الآن
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-brand-purple hover:text-brand-pink focus:outline-none" aria-label="القائمة">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/98 border-t border-gray-100 shadow-2xl backdrop-blur-md">
+            <div class="px-5 py-5 space-y-3 font-bold text-base">
+                <a href="#home" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">الرئيسية</a>
+                <a href="#about" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">عن المعهد</a>
+                <a href="#schedule" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">الدروس والجدول الجامعي</a>
+                <a href="#tech" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">التكوين التقني والبرمجي</a>
+                <a href="#why-us" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">لماذا تختارنا؟</a>
+                <a href="#contact" class="block px-3 py-2.5 rounded-xl text-brand-purple hover:bg-brand-surface">الموقع والتواصل</a>
+                <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+                    <button onclick="openRegistrationModal()" class="w-full py-3 bg-brand-pink text-white rounded-xl text-center font-bold shadow-md">
+                        <i class="fa-solid fa-graduation-cap ml-2"></i> استمارة التسجيل الأولي
+                    </button>
+                    <a href="https://wa.me/213779414224" target="_blank" class="w-full py-2.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-center font-bold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> تواصل عبر واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH OFFICIAL BANNER INTEGRATION -->
+    <section id="home" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 bg-mesh text-white overflow-hidden">
+        <!-- Ambient Glow Elements -->
+        <div class="absolute inset-0 bg-pattern-dots pointer-events-none"></div>
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-brand-pink rounded-full mix-blend-screen filter blur-[100px] opacity-25 animate-pulse"></div>
+        <div class="absolute -bottom-10 -left-20 w-[32rem] h-[32rem] bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-25"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left (Arabic Right in RTL): Headline & CTAs -->
+                <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+                    
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-pink-300 font-bold text-xs sm:text-sm backdrop-blur-md shadow-inner">
+                        <i class="fa-solid fa-award text-yellow-300"></i>
+                        <span>الوجهة الأكاديمية والتقنية الأولى لطلبة وهران</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.25] tracking-tight">
+                        ارتقِ بمسارك الجامعي وطوّر <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-l from-brand-pink to-pink-300">مهاراتك البرمجية والتقنية</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+                        في <strong class="text-white font-bold">MTI SkillUP</strong> نوفر لطلبة العلوم والتكنولوجيا مرافقة بيداغوجية تطبيقية ممتازة، مع دروس دعم شاملة في كافة المقاييس ودورات تكوينية تؤهلك مباشرة لسوق العمل الحديث.
+                    </p>
+
+                    <!-- Target tags -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1" dir="ltr">
+                        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/15 text-xs font-bold text-pink-200">
+                            # MI (Math & Info)
+                        </span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/15 text-xs font-bold text-purple-200">
+                            # ST (Sciences & Tech)
+                        </span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/15 text-xs font-bold text-blue-200">
+                            # SM (Sciences de la Matière)
+                        </span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/15 text-xs font-bold text-emerald-200">
+                            # Software Development
+                        </span>
+                    </div>
+
+                    <!-- Call to Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <button onclick="openRegistrationModal()" class="w-full sm:w-auto px-8 py-4 bg-brand-pink hover:bg-brand-pinkHover text-white font-black rounded-2xl shadow-glow transform hover:-translate-y-1 transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                            <span>سجل الآن واحجز مقعدك</span>
+                        </button>
+                        
+                        <a href="https://wa.me/213779414224" target="_blank" class="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-2xl backdrop-blur-md transform hover:-translate-y-1 transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                            <span>تواصل عبر واتساب</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Trust Stats -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 border-t border-white/10 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div class="p-2">
+                            <div class="font-black text-2xl text-pink-300 font-sans">+500</div>
+                            <div class="text-[12px] text-gray-300 font-semibold">طالب مستفيد</div>
+                        </div>
+                        <div class="p-2 border-x border-white/10">
+                            <div class="font-black text-2xl text-white font-sans">100%</div>
+                            <div class="text-[12px] text-gray-300 font-semibold">حضوري وتطبيقي</div>
+                        </div>
+                        <div class="p-2">
+                            <div class="font-black text-2xl text-yellow-300 font-sans">USTO</div>
+                            <div class="text-[12px] text-gray-300 font-semibold">موقع استراتيجي</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right (Visual Banner Card with Glow) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Floating Decorative Badges -->
+                        <div class="absolute -top-4 -right-4 z-20 bg-white text-brand-purple px-4 py-2 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-2 animate-float">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                <i class="fa-solid fa-bolt text-sm"></i>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[10px] text-gray-500 font-bold leading-none">موسم الامتحانات</p>
+                                <p class="text-xs font-black text-brand-purple">مراجعات مكثفة</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-5 -left-4 z-20 bg-brand-dark/90 backdrop-blur-md text-white px-4 py-2.5 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-3">
+                            <img src="logo.png" alt="Logo" class="w-8 h-8 rounded-full border border-brand-pink">
+                            <div class="text-right">
+                                <p class="text-[10px] text-pink-300 font-bold leading-none">إشراف أكاديمي</p>
+                                <p class="text-xs font-black">أساتذة ذوو خبرة وكفاءة</p>
+                            </div>
+                        </div>
+
+                        <!-- Official Banner Graphic Container -->
+                        <div class="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl shadow-brand-dark/50 group bg-brand-dark">
+                            <img src="banner.png" alt="MTI SkillUP Official Banner" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
+                            
+                            <!-- Banner Caption -->
+                            <div class="absolute bottom-4 right-4 left-4 p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/15 flex items-center justify-between text-xs text-white">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-location-dot text-brand-pink"></i>
+                                    <span class="font-bold">وهران - إيسطو (بجانب حمام الصونة)</span>
+                                </div>
+                                <span class="bg-brand-pink font-extrabold px-2.5 py-1 rounded-md text-[10px]">حضوري</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT STATS TICKER -->
+    <section class="py-6 bg-white border-b border-gray-100 shadow-sm relative z-20 -mt-4 mx-4 sm:mx-8 lg:mx-auto max-w-6xl rounded-2xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 text-center divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-gray-100">
+            <div class="pt-3 md:pt-0">
+                <div class="text-brand-pink text-2xl font-black mb-1"><i class="fa-solid fa-users-gear text-brand-purple ml-2"></i>أفواج مصغرة</div>
+                <p class="text-gray-500 text-xs sm:text-sm font-semibold">متابعة دقيقة لكل طالب وتفاعل مباشر</p>
+            </div>
+            <div class="pt-3 md:pt-0">
+                <div class="text-brand-pink text-2xl font-black mb-1"><i class="fa-solid fa-chalkboard-user text-brand-purple ml-2"></i>نخبة الأساتذة</div>
+                <p class="text-gray-500 text-xs sm:text-sm font-semibold">كفاءة جامعية وخبرة في إعداد الامتحانات</p>
+            </div>
+            <div class="pt-3 md:pt-0">
+                <div class="text-brand-pink text-2xl font-black mb-1"><i class="fa-solid fa-laptop-code text-brand-purple ml-2"></i>قاعات مجهزة</div>
+                <p class="text-gray-500 text-xs sm:text-sm font-semibold">أجهزة حديثة ومناخ دراسي مريح ومكيف</p>
+            </div>
+            <div class="pt-3 md:pt-0">
+                <div class="text-brand-pink text-2xl font-black mb-1"><i class="fa-solid fa-clipboard-check text-brand-purple ml-2"></i>حل التمارين والامتحانات</div>
+                <p class="text-gray-500 text-xs sm:text-sm font-semibold">تدريب مكثف على نماذج السنوات السابقة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-[#faf9fc]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+                
+                <!-- Left Visual Showcase -->
+                <div class="lg:col-span-5 order-2 lg:order-1 relative">
+                    <div class="relative">
+                        <!-- Background Glow Accent -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-brand-pink/20 to-brand-purple/20 rounded-3xl filter blur-xl"></div>
+                        
+                        <!-- Image Container with Official Branding -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="banner.png" alt="MTI SkillUp Campus Life" class="w-full h-auto object-cover">
+                            <div class="p-6 bg-gradient-to-b from-white to-brand-surface">
+                                <div class="flex items-center gap-4">
+                                    <img src="logo.png" alt="MTI Logo" class="w-16 h-16 rounded-2xl shadow-md border p-1 bg-white">
+                                    <div>
+                                        <h4 class="font-black text-xl text-brand-purple">MTI SkillUP</h4>
+                                        <p class="text-xs font-bold text-brand-pink uppercase tracking-wider">Technical Software Learning Institut</p>
+                                        <p class="text-xs text-gray-500 mt-1">التعاونية العقارية الهقار، إيسطو، وهران</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-brand-pink font-black text-xl">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xs text-gray-400 font-bold">التميز الأكاديمي</h5>
+                                <p class="text-sm font-black text-brand-purple">طرق تدريس حديثة وتطبيقية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Text Information -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-pink-100 text-brand-pink font-extrabold text-xs uppercase tracking-wide">
+                        <i class="fa-solid fa-bullseye"></i> عن المؤسسة
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-purple leading-tight">
+                        مؤسسة متخصصة في الدعم الجامعي والتأهيل البرمجي الاحترافي
+                    </h2>
+
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                        في <strong class="text-brand-purple font-bold">معهد MTI SkillUP (Master Tech Institut)</strong> بوهران، ندرك حجم التحديات التي يواجهها طلاب العلوم الدقيقة والتكنولوجيا في مشوارهم الجامعي. لذلك صممنا برامجنا لتكون جسراً حقيقياً يربط بين الفهم النظري العميق والتفوق في الامتحانات، إلى جانب اكتساب مهارات تقنية عملية تفتح لك أبواب المستقبل.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-surface text-brand-purple flex items-center justify-center flex-shrink-0 font-bold">
+                                <i class="fa-solid fa-graduation-cap text-brand-pink"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-brand-purple text-base">دروس دعم حضورية</h4>
+                                <p class="text-gray-500 text-xs mt-1">تغطية شاملة لجميع السداسيات مع حلول مفصلة للامتحانات السابقة.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-surface text-brand-purple flex items-center justify-center flex-shrink-0 font-bold">
+                                <i class="fa-solid fa-code text-brand-pink"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-brand-purple text-base">تكوين برمجي متخصص</h4>
+                                <p class="text-gray-500 text-xs mt-1">دورات عملية في البرمجة وتطوير البرمجيات لتطوير ملفك المهني.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button onclick="openRegistrationModal()" class="px-7 py-3.5 bg-brand-purple hover:bg-brand-pink text-white font-extrabold rounded-xl transition-all duration-300 shadow-md flex items-center gap-2">
+                            <span>سجل الآن في دوراتنا</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <a href="https://www.facebook.com/mtiskillup" target="_blank" class="px-6 py-3.5 bg-blue-50 text-blue-700 hover:bg-blue-100 font-bold rounded-xl transition-colors flex items-center gap-2 border border-blue-200">
+                            <i class="fa-brands fa-facebook text-lg"></i>
+                            <span>تابع صفحتنا على فيسبوك</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIVERSITY COURSES & SCHEDULE SECTION -->
+    <section id="schedule" class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-brand-pink font-extrabold text-xs">
+                    <i class="fa-solid fa-calendar-check"></i> البرنامج الحضوري الأسبوعي
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-purple">
+                    مراجعة عامة لتخصصات علوم وتكنولوجيا
+                </h2>
+                <p class="text-gray-600 font-bold text-base sm:text-lg" dir="ltr">
+                    COURS PARTICULIERS POUR LES ÉTUDIANTS EN SCIENCES ET TECHNOLOGIES (MI - ST - SM)
+                </p>
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">
+                    اختر المقياس المطلوب واضغط على الزر للتسجيل المباشر في الفوج المخصص لك قبل اكتمال العدد.
+                </p>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="ltr">
+                
+                <!-- Course: Analyse -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                                MI • ST
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            ANALYSE
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">تحليل رياضي ودوال ومعادلات تفاضلية لطلبة السنة الأولى.</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Lundi (الإثنين)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>16h00 — 18h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('ANALYSE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Algèbre -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                                MI • ST
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            ALGÈBRE
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">الجبر الخطي والمصفوفات والفضاءات الشعاعية.</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Mardi (الثلاثاء)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>16h00 — 18h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('ALGÈBRE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Physique -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                                MI • ST
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            PHYSIQUE
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">الميكانيك والكهرباء مع حل مفصل للسلاسل والتمارين.</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Mercredi (الأربعاء)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>16h00 — 18h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('PHYSIQUE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Chimie -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                                MI • ST
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            CHIMIE
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">بنية المادة والديناميكا الحرارية مع أمثلة تطبيقية.</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Jeudi (الخميس)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>16h00 — 18h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('CHIMIE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Math (SM) -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-pink-100 text-brand-pink font-black text-xs rounded-full">
+                                SM (Sciences de la Matière)
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            MATHÉMATIQUES
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">برنامج الرياضيات الخاص بطلبة علوم المادة (SM).</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Lundi (الإثنين)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>18h00 — 20h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('MATH (SM)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Logique Mathématique (MI) -->
+                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 font-black text-xs rounded-full">
+                                MI (Informatique)
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            LOGIQUE MATHÉMATIQUE
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1" dir="rtl">المنطق الرياضي وجداول الحقيقة والبراهين المنطقية.</p>
+                        
+                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                                <span>Mardi (الثلاثاء)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <span>16h00 — 18h00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('LOGIQUE MATHÉMATIQUE (MI)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course: Algorithmique (Featured Full Card) -->
+                <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-brand-purple to-[#3b1b85] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden group text-left">
+                    <div class="absolute -right-16 -top-16 w-56 h-56 bg-brand-pink/30 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3.5 py-1 bg-brand-pink text-white font-black text-xs rounded-full">
+                                    MI • Specialité Informatique
+                                </span>
+                                <span class="text-xs bg-white/20 text-white font-bold px-2.5 py-1 rounded-md">
+                                    ⭐ مادة أساسية
+                                </span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-black text-white group-hover:text-pink-300 transition-colors">
+                                ALGORITHMIQUE ET STRUCTURES DE DONNÉES
+                            </h3>
+                            <p class="text-gray-300 text-sm max-w-2xl" dir="rtl">
+                                تأسيس عميق في الخوارزميات، هياكل البيانات، والمصفوفات وحل المشكلات البرمجية للطلبة مع إشراف مهندسين متخصصين.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-6 pt-2 text-sm font-bold text-gray-200">
+                                <span class="flex items-center gap-2">
+                                    <i class="fa-regular fa-calendar-days text-brand-pink text-lg"></i> Mercredi (الأربعاء)
+                                </span>
+                                <span class="flex items-center gap-2">
+                                    <i class="fa-regular fa-clock text-brand-pink text-lg"></i> 17h00 — 19h00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex-shrink-0 w-full lg:w-auto">
+                            <button onclick="registerForCourse('ALGORITHMIQUE ET STRUCTURES DE DONNÉES (MI)')" class="w-full lg:w-auto px-8 py-4 bg-brand-pink hover:bg-brand-pinkHover text-white font-black rounded-xl shadow-glow transition-all duration-300 text-base flex items-center justify-center gap-2">
+                                <span>سجل في فوج الخوارزميات</span>
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Banner CTA -->
+            <div class="mt-14 text-center">
+                <button onclick="openRegistrationModal()" class="px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-pink text-white font-extrabold text-base sm:text-lg rounded-full shadow-lg hover:shadow-glow hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+                    <span>استمارة التسجيل الكاملة لجميع المقاييس</span>
+                    <i class="fa-solid fa-pen-nib"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TECHNICAL & SOFTWARE TRAINING SECTION -->
+    <section id="tech" class="py-24 bg-[#f4f2f9] relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-purple text-white font-extrabold text-xs">
+                    <i class="fa-solid fa-laptop-code text-brand-pink"></i> TECHNICAL SOFTWARE LEARNING
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-purple">
+                    الدورات التكوينية في البرمجة والتكنولوجيا
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    لا تكتفِ بالجانب النظري للجامعة! اكتسب مهارات حقيقية في تطوير البرمجيات والتقنيات الأكثر طلباً في سوق العمل.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Tech 1: Web Development -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-100 text-brand-pink flex items-center justify-center text-2xl font-black mb-5">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-brand-purple mb-2">تطوير الويب الشامل</h3>
+                        <p class="text-xs font-bold text-brand-pink mb-3" dir="ltr">HTML, CSS, JavaScript & React</p>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            بناء مواقع وتطبيقات ويب متجاوبة وتفاعلية من الصفر وحتى إطلاق مشاريع حقيقية على الإنترنت.
+                        </p>
+                    </div>
+                    <button onclick="registerForCourse('دورة تطوير الويب Web Development')" class="mt-6 text-xs font-bold text-brand-purple hover:text-brand-pink flex items-center gap-1.5 pt-3 border-t border-gray-100">
+                        <span>سجل في الدورة</span> <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Tech 2: Python & Data -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-purple-100 text-brand-purple flex items-center justify-center text-2xl font-black mb-5">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-brand-purple mb-2">برمجة بايثون والبيانات</h3>
+                        <p class="text-xs font-bold text-brand-purple mb-3" dir="ltr">Python & Problem Solving</p>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            إتقان لغة بايثون للتحليل البرمجي والذكاء الاصطناعي وبناء برامج مؤتمتة وقوية.
+                        </p>
+                    </div>
+                    <button onclick="registerForCourse('دورة بايثون Python')" class="mt-6 text-xs font-bold text-brand-purple hover:text-brand-pink flex items-center gap-1.5 pt-3 border-t border-gray-100">
+                        <span>سجل في الدورة</span> <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Tech 3: Git & Software Tools -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-black mb-5">
+                            <i class="fa-brands fa-git-alt"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-brand-purple mb-2">أدوات المهندس والمطور</h3>
+                        <p class="text-xs font-bold text-amber-600 mb-3" dir="ltr">Git, GitHub & Linux Basics</p>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            تعلم إدارة الأكواد والعمل الجماعي وتجهيز بيئات التطوير التي يطلبها أصحاب العمل.
+                        </p>
+                    </div>
+                    <button onclick="registerForCourse('دورة أدوات المطورين Git & Linux')" class="mt-6 text-xs font-bold text-brand-purple hover:text-brand-pink flex items-center gap-1.5 pt-3 border-t border-gray-100">
+                        <span>سجل في الدورة</span> <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Tech 4: UI/UX & Digital Office -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-black mb-5">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xl text-brand-purple mb-2">التصميم والمكتبية</h3>
+                        <p class="text-xs font-bold text-emerald-600 mb-3" dir="ltr">UI/UX Design & Office Pro</p>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            تصميم واجهات المستخدم الحديثة، واحتراف برامج العروض وإعداد المذكرات الجامعية.
+                        </p>
+                    </div>
+                    <button onclick="registerForCourse('دورة التصميم والمكتبية')" class="mt-6 text-xs font-bold text-brand-purple hover:text-brand-pink flex items-center gap-1.5 pt-3 border-t border-gray-100">
+                        <span>سجل في الدورة</span> <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center space-y-4 mb-16">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-brand-pink font-extrabold text-xs">
+                    ⭐ التميز والضمان الأكاديمي
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-purple">
+                    لماذا يختار الطلاب MTI SkillUP؟
+                </h2>
+                <p class="text-gray-500 text-base">
+                    نحن لا نقدم مجرد دروس، بل نضمن لك بيئة متكاملة تضمن تفوقك الأكاديمي والمهني.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="p-8 rounded-3xl bg-brand-surface border border-brand-border text-center space-y-4 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-purple to-brand-pink text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-brand-purple">مؤطرون ذوو كفاءة عالية</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        أساتذة جامعيون ومهندسون ممارسون يفهمون تفاصيل الامتحانات الرسمية ومفاتيح النقاط العالية.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-brand-surface border border-brand-border text-center space-y-4 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-pink to-pink-400 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-brand-purple">موقع استراتيجي قريب جداً</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        موقعنا في إيسطو (USTO) بالقرب من الجامعة ووسائل النقل والترامواي، لسهولة الوصول في أي وقت.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-brand-surface border border-brand-border text-center space-y-4 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-brand-purple to-indigo-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-brand-purple">مرافقة مستمرة ومجموعات تواصل</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        مجموعات خاصة للطلبة مع الأساتذة للإجابة على التمارين والأسئلة ومتابعة التحضير للامتحانات حتى آخر يوم.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-24 bg-brand-surface relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Contact Info Panel -->
+                    <div class="lg:col-span-6 p-8 sm:p-12 bg-gradient-to-br from-brand-purple to-brand-dark text-white relative flex flex-col justify-between">
+                        <!-- Glow -->
+                        <div class="absolute -right-20 -bottom-20 w-72 h-72 bg-brand-pink/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border border-brand-pink p-0.5 bg-white">
+                                <div>
+                                    <h3 class="font-black text-2xl">تواصل معنا وابدأ رحلتك</h3>
+                                    <p class="text-xs text-pink-300 font-bold">MTI SkillUP • Master Tech Institut</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
+                                فريقنا الأكاديمي والإداري جاهز للإجابة عن كل تساؤلاتكم ومساعدتكم في اختيار الأفواج المناسبة لجدولكم الدراسي.
+                            </p>
+
+                            <!-- Contact Channels -->
+                            <div class="space-y-6">
+                                
+                                <!-- Phones -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-brand-pink text-xl flex-shrink-0">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs text-gray-400 font-bold mb-1">أرقام الهواتف (اتصال مباشر)</h4>
+                                        <div class="flex flex-col gap-1" dir="ltr">
+                                            <a href="tel:0779414224" class="text-lg font-black hover:text-brand-pink transition-colors font-sans">
+                                                07 79 41 42 24
+                                            </a>
+                                            <a href="tel:0555675745" class="text-lg font-black hover:text-brand-pink transition-colors font-sans">
+                                                05 55 67 57 45
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- WhatsApp -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl flex-shrink-0">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs text-gray-400 font-bold mb-1">واتساب المعهد المباشر</h4>
+                                        <a href="https://wa.me/213779414224" target="_blank" class="text-base font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-2">
+                                            <span>مراسلتنا عبر واتساب</span>
+                                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-brand-pink text-xl flex-shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs text-gray-400 font-bold mb-1">عنوان المعهد</h4>
+                                        <p class="text-sm font-semibold leading-relaxed text-gray-200">
+                                            التعاونية العقارية الهقار، رقم 30 (إيسطو USTO)، <br>
+                                            وهران — بجانب حمام الصونة.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Facebook -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl flex-shrink-0">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs text-gray-400 font-bold mb-1">الصفحة الرسمية على فيسبوك</h4>
+                                        <a href="https://www.facebook.com/mtiskillup" target="_blank" class="text-base font-bold text-blue-300 hover:underline flex items-center gap-1.5" dir="ltr">
+                                            facebook.com/mtiskillup
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Working Hours -->
+                        <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-300">
+                            <span><i class="fa-regular fa-clock ml-1 text-pink-300"></i> أوقات العمل:</span>
+                            <span class="font-bold text-white">السبت إلى الخميس: 08:30 — 18:30</span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Map Embed -->
+                    <div class="lg:col-span-6 relative min-h-[420px] bg-gray-100 flex flex-col">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=USTO,%20Oran,%20Algeria&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full flex-grow min-h-[380px]">
+                        </iframe>
+                        <div class="p-4 bg-white border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-gray-500 font-bold"><i class="fa-solid fa-route text-brand-pink ml-1"></i> إيسطو - وهران</span>
+                            <a href="https://maps.google.com/?q=USTO,+Oran,+Algeria" target="_blank" class="text-xs font-bold text-brand-purple hover:text-brand-pink flex items-center gap-1">
+                                <span>فتح في تطبيق الخرائط</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-2 border-brand-purple/40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="MTI Logo" class="w-12 h-12 rounded-full border border-brand-pink p-0.5 bg-white">
+                        <div>
+                            <span class="font-black text-2xl tracking-tight text-white">
+                                MTI <span class="text-brand-pink">SkillUP</span>
+                            </span>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Master Tech Institut</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        مؤسسة متخصصة في الدعم الجامعي والتكوين التقني والبرمجي بوهران. نسعى لتمكين الطلاب ورفع كفاءاتهم الأكاديمية والعملية.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.facebook.com/mtiskillup" target="_blank" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-brand-pink flex items-center justify-center text-white transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/213779414224" target="_blank" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-white transition-colors" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="tel:0779414224" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-brand-purpleLight flex items-center justify-center text-white transition-colors" aria-label="Phone">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fast Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-extrabold text-white text-base">روابط سريعة</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-brand-pink transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-brand-pink transition-colors">عن المعهد</a></li>
+                        <li><a href="#schedule" class="hover:text-brand-pink transition-colors">جدول مقاييس الجامعة</a></li>
+                        <li><a href="#tech" class="hover:text-brand-pink transition-colors">دورات البرمجة والتكنولوجيا</a></li>
+                        <li><a href="#contact" class="hover:text-brand-pink transition-colors">الموقع والتواصل</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs List -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-extrabold text-white text-base">التخصصات المدعومة</h4>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-300">Sciences & Tech (ST)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-300">Math & Info (MI)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-300">Sciences de la Matière (SM)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-300">Algorithmique & Code</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-gray-300">Web Development</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4 text-center sm:text-right">
+                <p>
+                    جميع الحقوق محفوظة &copy; <span id="year"></span> <strong>MTI SkillUP</strong> — Master Tech Institut
+                </p>
+                <p class="text-gray-400">
+                    وهران • Oran, Algeria
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP CTA BUTTON -->
+    <aside aria-label="تواصل سريع" class="fixed bottom-6 left-6 z-40 flex items-center gap-3">
+        <a href="https://wa.me/213779414224?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20MTI%20SkillUP%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D8%B1%D9%88%D8%B3%20%D8%A7%D9%84%D8%AF%D8%B9%D9%85%20%D9%88%D8%A7%D9%84%D8%AA%D9%83%D9%88%D9%8A%D9%86%20%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A." 
+           target="_blank" 
+           class="group relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
+            <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-200 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-700"></span>
+            </span>
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span class="hidden sm:inline font-bold text-sm">تحدث معنا واتساب</span>
+        </a>
+    </aside>
+
+    <!-- INTERACTIVE REGISTRATION MODAL -->
+    <div id="registration-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-brand-dark/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all animate-fadeIn">
+            
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-brand-purple to-brand-pink p-6 text-white relative">
+                <button onclick="closeRegistrationModal()" class="absolute top-5 left-5 text-white/80 hover:text-white text-2xl font-bold focus:outline-none">
+                    &times;
+                </button>
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border border-white/40 p-0.5 bg-white">
+                    <div>
+                        <h3 class="text-xl font-black">استمارة التسجيل الأولي</h3>
+                        <p class="text-xs text-pink-200 font-semibold">MTI SkillUP • احجز مكانك في دقائق</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="enrollment-form" onsubmit="handleEnrollment(event)" class="p-6 sm:p-8 space-y-4 text-right">
+                <div>
+                    <label class="block text-xs font-black text-gray-700 mb-1.5">الاسم واللقب بالكامل *</label>
+                    <input type="text" id="student-name" required placeholder="مثال: محمد بن علي" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-sm font-semibold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black text-gray-700 mb-1.5">رقم الهاتف أو الواتساب *</label>
+                    <input type="tel" id="student-phone" required placeholder="مثال: 0779414224" dir="ltr" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-sm font-semibold text-right">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-black text-gray-700 mb-1.5">التخصص الجامعي *</label>
+                        <select id="student-major" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-sm font-semibold bg-white">
+                            <option value="MI (Math & Info)">MI (رياضيات وإعلام آلي)</option>
+                            <option value="ST (Sciences & Tech)">ST (علوم وتكنولوجيا)</option>
+                            <option value="SM (Sciences Matière)">SM (علوم المادة)</option>
+                            <option value="تكوين برمجي عام">تكوين برمجي وتقني</option>
+                            <option value="تخصص آخر">تخصص جامعي آخر</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-gray-700 mb-1.5">السنة الدراسية *</label>
+                        <select id="student-year" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-sm font-semibold bg-white">
+                            <option value="السنة الأولى (L1)">السنة الأولى (L1)</option>
+                            <option value="السنة الثانية (L2)">السنة الثانية (L2)</option>
+                            <option value="السنة الثالثة (L3)">السنة الثالثة (L3)</option>
+                            <option value="ماستر أو خريج">ماستر أو خريج</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black text-gray-700 mb-1.5">المقياس أو الدورة المطلوبة *</label>
+                    <input type="text" id="course-name" required placeholder="مثال: Analyse، Algèbre، أو Web Development" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-sm font-semibold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black text-gray-700 mb-1.5">ملاحظة أو استفسار إضافي (اختياري)</label>
+                    <textarea id="student-notes" rows="2" placeholder="أي استفسار يخص التوقيت أو البرنامج..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-brand-pink focus:ring-2 focus:ring-pink-100 outline-none transition-all text-xs font-semibold resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-pink to-brand-purple hover:opacity-95 text-white font-black rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base">
+                        <i class="fa-brands fa-whatsapp text-xl text-green-300"></i>
+                        <span>تأكيد التسجيل وإرسال الطلب عبر واتساب</span>
+                    </button>
+                    <p class="text-[11px] text-gray-400 text-center mt-2 font-semibold">
+                        🔒 سيتم توجيهك مباشرة إلى محادثة واتساب المعهد مع تعبئة بياناتك فورياً.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when links are clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Handlers
+        const modal = document.getElementById('registration-modal');
+
+        function openRegistrationModal() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRegistrationModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeRegistrationModal();
+            }
+        });
+
+        // Register for specific course
+        function registerForCourse(courseTitle) {
+            document.getElementById('course-name').value = courseTitle;
+            openRegistrationModal();
+        }
+
+        // Handle Registration Form (Builds direct WhatsApp Message)
+        function handleEnrollment(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('student-name').value.trim();
+            const phone = document.getElementById('student-phone').value.trim();
+            const major = document.getElementById('student-major').value;
+            const year = document.getElementById('student-year').value;
+            const course = document.getElementById('course-name').value.trim();
+            const notes = document.getElementById('student-notes').value.trim();
+
+            const messageText = 
+`سلام عليكم MTI SkillUP 🎓
+أريد التسجيل في دروس الدعم / التكوين:
+
+👤 الاسم واللقب: ${name}
+📞 رقم الهاتف: ${phone}
+📚 التخصص: ${major}
+📅 السنة: ${year}
+🎯 المقياس/الدورة: ${course}
+${notes ? `📝 ملاحظة: ${notes}` : ''}
+
+يرجى تأكيد الحجز والتفاصيل وشكراً!`;
+
+            const whatsappUrl = `https://wa.me/213779414224?text=${encodeURIComponent(messageText)}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+            closeRegistrationModal();
+        }
+    </script>
+</body>
+</html>
