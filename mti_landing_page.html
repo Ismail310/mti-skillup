@@ -432,7 +432,7 @@
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-brand-pink font-extrabold text-xs">
-                    <i class="fa-solid fa-calendar-check"></i> البرنامج الحضوري الأسبوعي
+                    <i class="fa-solid fa-tags"></i> مقاييس الدعم الحضوري والأسعار
                 </span>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-purple">
                     مراجعة عامة لتخصصات علوم وتكنولوجيا
@@ -446,266 +446,221 @@
             </div>
 
             <!-- Course Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="ltr">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 max-w-6xl mx-auto" dir="ltr">
                 
-                <!-- Course: Analyse -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                <!-- Course 1: Maths - Analyse -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-2 bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
                     <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center justify-between gap-3 mb-3">
                             <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
-                                MI • ST
+                                MI • ST • SM
                             </span>
                             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
                                 <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
                             </span>
                         </div>
+                        <span class="text-[11px] font-black text-brand-pink tracking-wider uppercase block mb-1">MATHÉMATIQUES</span>
                         <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
                             ANALYSE
                         </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">تحليل رياضي ودوال ومعادلات تفاضلية لطلبة السنة الأولى.</p>
+                        <p class="text-gray-500 text-xs mt-1 leading-relaxed" dir="rtl">
+                            تحليل رياضي ودراسة الدوال، النهايات، المتتاليات، والمعادلات التفاضلية لطلبة السنة الأولى.
+                        </p>
                         
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Lundi (الإثنين)</span>
+                        <!-- Pricing Details -->
+                        <div class="mt-6 pt-4 border-t border-gray-200 space-y-2.5" dir="rtl">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/70 border border-purple-100" dir="rtl">
+                                <span class="text-xs font-bold text-gray-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket text-brand-purple"></i>
+                                    <span>للحصة الواحدة:</span>
+                                </span>
+                                <span class="font-black text-brand-purple text-sm font-sans" dir="ltr">1,200 DA</span>
                             </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>16h00 — 18h00</span>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/70 border border-brand-pink/20" dir="rtl">
+                                <span class="text-xs font-bold text-brand-pink flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-check text-brand-pink"></i>
+                                    <span>اشتراك شهري:</span>
+                                </span>
+                                <span class="font-black text-brand-pink text-base font-sans" dir="ltr">5,000 DA <span class="text-[11px] font-bold text-gray-500">/شهر</span></span>
                             </div>
                         </div>
                     </div>
-                    <button onclick="registerForCourse('ANALYSE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                    <button onclick="registerForCourse('MATHS : ANALYSE')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm" dir="rtl">
                         <span>حجز مقعد في هذا الفوج</span>
                         <i class="fa-solid fa-chevron-left text-xs"></i>
                     </button>
                 </div>
 
-                <!-- Course: Algèbre -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                <!-- Course 2: Maths - Algèbre -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-2 bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
                     <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center justify-between gap-3 mb-3">
                             <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
-                                MI • ST
+                                MI • ST • SM
                             </span>
                             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
                                 <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
                             </span>
                         </div>
+                        <span class="text-[11px] font-black text-brand-pink tracking-wider uppercase block mb-1">MATHÉMATIQUES</span>
                         <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
                             ALGÈBRE
                         </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">الجبر الخطي والمصفوفات والفضاءات الشعاعية.</p>
+                        <p class="text-gray-500 text-xs mt-1 leading-relaxed" dir="rtl">
+                            الجبر الخطي والمصفوفات، الفضاءات الشعاعية، وحساب المحددات ونظم المعادلات الخطية.
+                        </p>
                         
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Mardi (الثلاثاء)</span>
+                        <!-- Pricing Details -->
+                        <div class="mt-6 pt-4 border-t border-gray-200 space-y-2.5" dir="rtl">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/70 border border-purple-100" dir="rtl">
+                                <span class="text-xs font-bold text-gray-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket text-brand-purple"></i>
+                                    <span>للحصة الواحدة:</span>
+                                </span>
+                                <span class="font-black text-brand-purple text-sm font-sans" dir="ltr">1,200 DA</span>
                             </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>16h00 — 18h00</span>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/70 border border-brand-pink/20" dir="rtl">
+                                <span class="text-xs font-bold text-brand-pink flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-check text-brand-pink"></i>
+                                    <span>اشتراك شهري:</span>
+                                </span>
+                                <span class="font-black text-brand-pink text-base font-sans" dir="ltr">5,000 DA <span class="text-[11px] font-bold text-gray-500">/شهر</span></span>
                             </div>
                         </div>
                     </div>
-                    <button onclick="registerForCourse('ALGÈBRE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                    <button onclick="registerForCourse('MATHS : ALGÈBRE')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm" dir="rtl">
                         <span>حجز مقعد في هذا الفوج</span>
                         <i class="fa-solid fa-chevron-left text-xs"></i>
                     </button>
                 </div>
 
-                <!-- Course: Physique -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                <!-- Course 3: Algorithms -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-2 bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
                     <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                        <div class="flex items-center justify-between gap-3 mb-3">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 font-black text-xs rounded-full">
                                 MI • ST
                             </span>
                             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
                                 <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
                             </span>
                         </div>
+                        <span class="text-[11px] font-black text-indigo-600 tracking-wider uppercase block mb-1">INFORMATIQUE</span>
+                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
+                            ALGORITHMES
+                        </h3>
+                        <p class="text-gray-500 text-xs mt-1 leading-relaxed" dir="rtl">
+                            الخوارزميات وهياكل البيانات، المصفوفات، الشروط والتكرار وحل المشكلات البرمجية للامتحانات.
+                        </p>
+                        
+                        <!-- Pricing Details -->
+                        <div class="mt-6 pt-4 border-t border-gray-200 space-y-2.5" dir="rtl">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/70 border border-purple-100" dir="rtl">
+                                <span class="text-xs font-bold text-gray-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket text-brand-purple"></i>
+                                    <span>للحصة الواحدة:</span>
+                                </span>
+                                <span class="font-black text-brand-purple text-sm font-sans" dir="ltr">1,200 DA</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/70 border border-brand-pink/20" dir="rtl">
+                                <span class="text-xs font-bold text-brand-pink flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-check text-brand-pink"></i>
+                                    <span>اشتراك شهري:</span>
+                                </span>
+                                <span class="font-black text-brand-pink text-base font-sans" dir="ltr">5,000 DA <span class="text-[11px] font-bold text-gray-500">/شهر</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="registerForCourse('ALGORITHMES (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm" dir="rtl">
+                        <span>حجز مقعد في هذا الفوج</span>
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Course 4: Physique -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-2 lg:col-start-2 bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-3">
+                            <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
+                                MI • ST • SM
+                            </span>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
+                            </span>
+                        </div>
+                        <span class="text-[11px] font-black text-blue-600 tracking-wider uppercase block mb-1">PHYSIQUE</span>
                         <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
                             PHYSIQUE
                         </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">الميكانيك والكهرباء مع حل مفصل للسلاسل والتمارين.</p>
+                        <p class="text-gray-500 text-xs mt-1 leading-relaxed" dir="rtl">
+                            الميكانيك والكهرباء والفيزياء العامة مع حل مفصل للسلاسل ونماذج الامتحانات السابقة.
+                        </p>
                         
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Mercredi (الأربعاء)</span>
+                        <!-- Pricing Details -->
+                        <div class="mt-6 pt-4 border-t border-gray-200 space-y-2.5" dir="rtl">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/70 border border-purple-100" dir="rtl">
+                                <span class="text-xs font-bold text-gray-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket text-brand-purple"></i>
+                                    <span>للحصة الواحدة:</span>
+                                </span>
+                                <span class="font-black text-brand-purple text-sm font-sans" dir="ltr">1,200 DA</span>
                             </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>16h00 — 18h00</span>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/70 border border-brand-pink/20" dir="rtl">
+                                <span class="text-xs font-bold text-brand-pink flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-check text-brand-pink"></i>
+                                    <span>اشتراك شهري:</span>
+                                </span>
+                                <span class="font-black text-brand-pink text-base font-sans" dir="ltr">5,000 DA <span class="text-[11px] font-bold text-gray-500">/شهر</span></span>
                             </div>
                         </div>
                     </div>
-                    <button onclick="registerForCourse('PHYSIQUE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                    <button onclick="registerForCourse('PHYSIQUE (MI - ST - SM)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm" dir="rtl">
                         <span>حجز مقعد في هذا الفوج</span>
                         <i class="fa-solid fa-chevron-left text-xs"></i>
                     </button>
                 </div>
 
-                <!-- Course: Chimie -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
+                <!-- Course 5: Chimie -->
+                <div class="col-span-1 md:col-span-2 md:max-w-md md:mx-auto md:w-full lg:max-w-none lg:mx-0 lg:col-span-2 bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
                     <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center justify-between gap-3 mb-3">
                             <span class="px-3 py-1 bg-purple-100 text-brand-purple font-black text-xs rounded-full">
-                                MI • ST
+                                MI • ST • SM
                             </span>
                             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
                                 <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
                             </span>
                         </div>
+                        <span class="text-[11px] font-black text-emerald-600 tracking-wider uppercase block mb-1">CHIMIE</span>
                         <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
                             CHIMIE
                         </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">بنية المادة والديناميكا الحرارية مع أمثلة تطبيقية.</p>
+                        <p class="text-gray-500 text-xs mt-1 leading-relaxed" dir="rtl">
+                            بنية المادة والديناميكا الحرارية مع شرح مفصل للمفاهيم وحل التمارين والامتحانات التطبيقية.
+                        </p>
                         
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Jeudi (الخميس)</span>
+                        <!-- Pricing Details -->
+                        <div class="mt-6 pt-4 border-t border-gray-200 space-y-2.5" dir="rtl">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/70 border border-purple-100" dir="rtl">
+                                <span class="text-xs font-bold text-gray-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket text-brand-purple"></i>
+                                    <span>للحصة الواحدة:</span>
+                                </span>
+                                <span class="font-black text-brand-purple text-sm font-sans" dir="ltr">1,200 DA</span>
                             </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>16h00 — 18h00</span>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/70 border border-brand-pink/20" dir="rtl">
+                                <span class="text-xs font-bold text-brand-pink flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-check text-brand-pink"></i>
+                                    <span>اشتراك شهري:</span>
+                                </span>
+                                <span class="font-black text-brand-pink text-base font-sans" dir="ltr">5,000 DA <span class="text-[11px] font-bold text-gray-500">/شهر</span></span>
                             </div>
                         </div>
                     </div>
-                    <button onclick="registerForCourse('CHIMIE (MI - ST)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
+                    <button onclick="registerForCourse('CHIMIE (MI - ST - SM)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm" dir="rtl">
                         <span>حجز مقعد في هذا الفوج</span>
                         <i class="fa-solid fa-chevron-left text-xs"></i>
                     </button>
-                </div>
-
-                <!-- Course: Math (SM) -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
-                    <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
-                            <span class="px-3 py-1 bg-pink-100 text-brand-pink font-black text-xs rounded-full">
-                                SM (Sciences de la Matière)
-                            </span>
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
-                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
-                            MATHÉMATIQUES
-                        </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">برنامج الرياضيات الخاص بطلبة علوم المادة (SM).</p>
-                        
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Lundi (الإثنين)</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>18h00 — 20h00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="registerForCourse('MATH (SM)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
-                        <span>حجز مقعد في هذا الفوج</span>
-                        <i class="fa-solid fa-chevron-left text-xs"></i>
-                    </button>
-                </div>
-
-                <!-- Course: Logique Mathématique (MI) -->
-                <div class="bg-brand-surface rounded-2xl p-6 border-2 border-transparent hover:border-brand-pink hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group text-left">
-                    <div>
-                        <div class="flex items-center justify-between gap-3 mb-4">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 font-black text-xs rounded-full">
-                                MI (Informatique)
-                            </span>
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
-                                <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> تسجيل مفتوح
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-black text-brand-purple group-hover:text-brand-pink transition-colors">
-                            LOGIQUE MATHÉMATIQUE
-                        </h3>
-                        <p class="text-gray-500 text-xs mt-1" dir="rtl">المنطق الرياضي وجداول الحقيقة والبراهين المنطقية.</p>
-                        
-                        <div class="mt-6 space-y-2.5 pt-4 border-t border-gray-200">
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-pink-100 text-brand-pink flex items-center justify-center">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                </div>
-                                <span>Mardi (الثلاثاء)</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-sm font-bold text-gray-700">
-                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-purple flex items-center justify-center">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <span>16h00 — 18h00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="registerForCourse('LOGIQUE MATHÉMATIQUE (MI)')" class="mt-6 w-full py-3 bg-white border border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white font-extrabold rounded-xl transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm">
-                        <span>حجز مقعد في هذا الفوج</span>
-                        <i class="fa-solid fa-chevron-left text-xs"></i>
-                    </button>
-                </div>
-
-                <!-- Course: Algorithmique (Featured Full Card) -->
-                <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-brand-purple to-[#3b1b85] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden group text-left">
-                    <div class="absolute -right-16 -top-16 w-56 h-56 bg-brand-pink/30 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <span class="px-3.5 py-1 bg-brand-pink text-white font-black text-xs rounded-full">
-                                    MI • Specialité Informatique
-                                </span>
-                                <span class="text-xs bg-white/20 text-white font-bold px-2.5 py-1 rounded-md">
-                                    ⭐ مادة أساسية
-                                </span>
-                            </div>
-                            <h3 class="text-2xl sm:text-3xl font-black text-white group-hover:text-pink-300 transition-colors">
-                                ALGORITHMIQUE ET STRUCTURES DE DONNÉES
-                            </h3>
-                            <p class="text-gray-300 text-sm max-w-2xl" dir="rtl">
-                                تأسيس عميق في الخوارزميات، هياكل البيانات، والمصفوفات وحل المشكلات البرمجية للطلبة مع إشراف مهندسين متخصصين.
-                            </p>
-                            <div class="flex flex-wrap items-center gap-6 pt-2 text-sm font-bold text-gray-200">
-                                <span class="flex items-center gap-2">
-                                    <i class="fa-regular fa-calendar-days text-brand-pink text-lg"></i> Mercredi (الأربعاء)
-                                </span>
-                                <span class="flex items-center gap-2">
-                                    <i class="fa-regular fa-clock text-brand-pink text-lg"></i> 17h00 — 19h00
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="flex-shrink-0 w-full lg:w-auto">
-                            <button onclick="registerForCourse('ALGORITHMIQUE ET STRUCTURES DE DONNÉES (MI)')" class="w-full lg:w-auto px-8 py-4 bg-brand-pink hover:bg-brand-pinkHover text-white font-black rounded-xl shadow-glow transition-all duration-300 text-base flex items-center justify-center gap-2">
-                                <span>سجل في فوج الخوارزميات</span>
-                                <i class="fa-solid fa-arrow-left"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
 
             </div>
